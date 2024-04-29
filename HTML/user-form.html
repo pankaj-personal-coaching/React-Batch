@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Form</title>
+    <link rel="stylesheet" href="../CSS/user-form.css" />
+    <script>
+      function getFormData(event) {
+        let formData = new FormData(event.target);
+        let formObj = Object.fromEntries(formData)
+        alert(JSON.stringify(formObj));
+      }
+    </script> 
+  </head>
+  <body>
+    <div class="form-container">
+      <form onsubmit="getFormData(event)">
+        <!-- User form with all details-->
+        <h1 class="heading">User</h1>
+        <div class="form-elements">
+          <div>
+            <label for="name" id="name">Full Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter full name.."
+            />
+            <label for="email" id="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email.."
+            />
+          </div>
+          <div>
+            <label for="password" id="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter your password.."
+            />
+            <label for="number" id="number">Phone Number</label>
+            <input
+              type="number"
+              name="number"
+              id="number"
+              placeholder="Enter your number.."
+            />
+          </div>
+          <div>
+            <label for="birthdate" id="birthdate">Birth Date</label>
+            <input type="datetime-local" name="birthdate" id="birthdate" />
+          </div>
+          <div>
+            <label for="">Gender</label>
+            <input type="radio" name="gender" id="gender-male" />
+            <label for="gender-male">Male</label>
+            <input type="radio" name="gender" id="gender-female" />
+            <label for="gender-female">Female</label>
+            <input type="radio" name="gender" id="gender-other" />
+            <label for="gender-other">Other</label>
+          </div>
+          <div>
+            <label>Skills:</label>
+            <input type="checkbox" name="Javascript" id="javascript" />
+            <label for="javascript">Javascript</label>
+            <input type="checkbox" name="React" id="react" />
+            <label for="react">React</label>
+            <input type="checkbox" name="NodeJS" id="nodejs" />
+            <label for="nodejs">NodeJS</label>
+            <input type="checkbox" name="HTML" id="html" />
+            <label for="html">HTML</label>
+            <input type="checkbox" name="CSS" id="css" />
+            <label for="css">CSS</label>
+          </div>
+          <div>
+            <label>Address:</label>
+            <textarea name="address" id="address" cols="30" rows="1"></textarea>
+            <label for="">Car:</label>
+            <select name="car" id="select-car">
+              <option value="default">--Select--</option>
+              <option value="valvo">Volvo</option>
+              <option value="bmw">BMW</option>
+              <option value="tata">Tata</option>
+              <option value="maruti">Maruti</option>
+              <option value="audi">Audi</option>
+              <option value="kia">Kia</option>
+            </select>
+          </div>
+          <div>
+            <label>Upload file</label>
+            <input type="file" name="file" id="file" />
+          </div>
+          <div class="button">
+            <input type="submit" value="Submit" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

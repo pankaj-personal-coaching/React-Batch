@@ -1,0 +1,10 @@
+header {
+  background-color: aqua;
+  padding: 25px;
+}
+
+.header-wrapper {
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+}

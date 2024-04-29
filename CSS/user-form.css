@@ -1,0 +1,55 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: azure;
+  font-family: "Courier New", Courier, monospace;
+}
+
+label {
+  padding: 12px 12px 12px 12px;
+  display: inline-block;
+  width: 100px;
+  margin: 10px 0px 0px 0px;
+}
+
+input[type="text"],
+[type="email"],
+[type="password"],
+[type="number"],
+[type="datetime-local"],
+[type="file"],
+textarea,
+select {
+  padding: 12px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+input[type="submit"] {
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  width: 100px;
+  height: 40px;
+  background-color: rgb(125, 182, 239);
+  color: rgb(34, 1, 1);
+  cursor: pointer;
+}
+
+.button {
+  text-align: center;
+}
+
+.form-container {
+  width: 100%;
+}
+
+.form-elements {
+  border: 1px solid grey;
+  padding: 20px;
+  margin: 50px;
+}
+
+.heading {
+  text-align: center;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First JSX example</title>
+    <link rel="stylesheet" href="../CSS/simple.css" />
+  </head>
+  <body>
+    <div class="root"></div>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone@7.24.0/babel.min.js"></script>
+    <script type="text/babel">
+      // To get the root elements from the HTML document.
+      const rootElement = document.querySelector(".root");
+
+      //JSX element
+      let footerValue = "Copyrights 2024";
+      const getHeader = () => {
+        return "Page Header";
+      };
+      const header = (
+        <header>
+          <h1>{getHeader()}</h1>
+        </header>
+      );
+
+      const tableHeader = (
+        <thead>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Designation</th>
+          <th>Salary</th>
+          <th>City</th>
+        </thead>
+      );
+
+      const tableContent = [
+        {
+          id: "0001",
+          name: "Pankaj",
+          designation: "Software Engi.",
+          salary: 15000,
+          city: "Pune",
+        },
+        {
+          id: "0002",
+          name: "Rahul",
+          designation: "Trainee",
+          salary: 8000,
+          city: "Jalgaon",
+        },
+        {
+          id: "0003",
+          name: "Siddhant",
+          designation: "Sr. Software Engi.",
+          salary: 35000,
+          city: "Mumbai",
+        },
+        {
+          id: "0004",
+          name: "Rohit",
+          designation: "Manager",
+          salary: 55000,
+          city: "Banglore",
+        },
+        {
+          id: "0005",
+          name: "Sachin",
+          designation: "President",
+          salary: 100000,
+          city: "New Delhi",
+        },
+      ];
+
+      const table = (
+        <table id="table" style={{ border: "1px solid black" }}>
+          {tableHeader}
+          {tableContent.map((item) => {
+            return (
+              <tr>
+                <td>{item.id}</td>
+                <td>{item.name}</td>
+                <td>{item.designation}</td>
+                <td>{item.salary}</td>
+                <td>{item.city}</td>
+              </tr>
+            );
+          })}
+        </table>
+      );
+
+      const footer = (
+        <footer style={{ "margin-top": "50px" }}>{footerValue}</footer>
+      );
+
+      const main = (
+        <div className="table-container">
+          {header}
+          {table}
+          {footer}
+        </div>
+      );
+      // We render the jsx element using ReactDOM package.
+      // ReactDOM has the render method. and render method takes 2 args.
+      ReactDOM.render(main, rootElement);
+    </script>
+  </body>
+</html>

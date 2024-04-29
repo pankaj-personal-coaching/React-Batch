@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation bar</title>
+    <link rel="stylesheet" href="navbar.css" />
+    <script>
+      function showList() {
+        let element = document.getElementById(12345678);
+        if (`${element.classList}`.includes("show-dropdown")) {
+          element.classList.remove("show-dropdown");
+        } else {
+          element.classList.add("show-dropdown");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <ul class="dropdown" style="float: left">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="network.html">My Network</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="messaging.html">Messaging</a></li>
+      <li><a href="notification.html">Notification</a></li>
+    </ul>
+    <div class="dropdown" style="float: right">
+      <button class="dd-button" onclick="showList()">My Profile</button>
+      <div class="dd-content" id="12345678">
+        <a href="">Settings</a>
+        <a href="">Help</a>
+        <a href="">Logout</a>
+        <a href="profile.html">View Profile</a>
+      </div>
+    </div>
+  </body>
+</html>

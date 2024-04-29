@@ -1,0 +1,1315 @@
+To install Node JS on the machine:
+https://nodejs.org/en/download/current
+
+Javascript: 
+1. Adding JS into a web page
+ - Inline script: Inline scripts can be added on the HTML element directly thorugh events.
+ - Internal script: Internal scripts can be written in the head or body. 
+   But it is prefered to put it on the body of the HTML.
+   We can add Javascript logic into HTML pages thorugh <script> tag/element.
+ - External script: Similar to the internal script, we can add external Javascript code to the HTML pages.
+   The external script link can be on the head or body part of the HTML page like internal script.
+   But it is prefered to put it on the body of the HTML.
+   We need to create javascript files with the extension of ".js". 
+   We can add Javascript logic into HTML pages thorugh <script> tag/element.
+ - Multiple External scripts: Multiple External scripts can be added like a external script itself.
+   And we can add different javascript files to the HTML page.
+   We can add Javascript logic into HTML pages thorugh <script> tag/element.
+
+   Note:
+   In internal, external, multiple external we need to use <script> tag.
+   In External and multiple external we need to use <script> tag along with src property.
+
+2. Variables: 
+ - Variables are nothing but to store data and identifier to the data.
+ - In javascript we can create variables using "var" keyword.
+ - And ES6 has provided 2 different ways to create variables.
+    1. let
+    2. const
+ - Syntax: 
+   using var. var name = "some name";
+   using let. let name = "some name";
+   using const const name = "some name";
+
+  var: We can create variable and store data into variables by using var keyword. 
+       When we create variables using var hoisting is created for those variables.
+       The variables which are created using var keyword has a scope to the file or function.
+       If we are creating variables inside function so the scope of those variable stick to the function itself.
+       If variables created outside of the fucntion then the scope will be stick to the file. 
+
+  let: Unlike var we can use let as well to create variabes.
+  const: we can use const to create variables.
+
+  let and const:
+  In the case of let and const the hoisting will not play any role.
+  The variables which are created using let or const keyword has a block scope.
+  The most recent curly brackets will be the scope for the varaibles.
+  The most important difference between const and let is, we cannot modify the values of const variables.
+
+
+  Hoisting:
+  - It is a default behaviour of moving declarations at the top of the file or functions. 
+  - A variables can be declared after it has been used.
+
+
+3. Datatypes: 
+ - Data or values are having the data types. 
+ - Data types describe the characteristics of the data.
+ - Also it describes what kind of data we are storing in to the varaibles.
+ - Data types can be divided into 2 types.
+    1. Primitive data types.
+      1. Numbers
+      2. Strings
+      3. Booleans: either true or false.
+      4. Null: Data type/Value
+      5. Undefined: Data type/Value
+      6. Symbol: let s = Symbol() / let s = new Symbol()
+    2. Non-Primitive data types (Object References).
+      1. Objects
+      2. Arrays
+
+index in String:
+// value p a n k a j
+// index 0 1 2 3 4 5
+
+Strings Methods(Inbuilt methods):
+1. length(): it return string length. return number of characters in the string.
+2. split(): The method returns or divides the string into different substring based on the
+            specified input parameter. and returns as array.
+3. trim(): it removes empty spaces from string from the start.
+4. includes(): It checks if the substring is present in the string. and return true if it finds.
+5. replace(identifier, value): It replaces the substring by specified parameter.
+6. indexOf(identifier): It finds the indentifies in the string and return the index of 
+   the indentifier
+
+To iterate over string we can use for loop.
+
+Arrays: 
+ - Arrays can store multiple data type values or same data data type values.
+ - Each value in array has an idex, by which we can access the value from an array.
+ - And every value has reference in memory address as well.
+ - Index in an array starts from 0 to the length of an array.
+ 
+Syntax:
+let array = [1,2,3,4,5,6,7,8,9,10];  // []
+let array = Array(); // []
+let array = new Array(); // []
+
+arr1.length = 0; // To empty array.
+
+Array methods to manipulate:
+push: push method will add a value at the end of an array.
+pop: pop method will remove value from an end of an array
+shift: shift method will remove values from starting index.
+unshift: unshift method will add values from the starting index.
+length: It will return the count of the array elements. and it could empty the array.
+concat: To concatenate 2 Arrays.
+slice: To cut out a multiple items in range. 
+       It accepts 2 parameters. 1st parameter will be the starting index and 2nd parameter
+       Will be End index but it will not consider the 2nd index.  
+fill: Fill method will add static values to the array at specified number of times.
+indexOf: To return the index of the value from an array.
+         If the array doesn't containt the value it will return -1.
+         It can be used to check if items are present in the array.
+lastIndexOf: It return the lat index of the item/value. It returns -1 if item is not in the array. 
+join: Joins the element by specified parameter. and it converts it to string.
+includes: It checks the element is present in the array or not. 
+          It return true if element is in the array or returns false
+toString: It converts array to string.
+splice: Can add and remove elements from an array.
+        It accepts 2 or more parameters.
+        The 1st parameter is the index from where the operation starts.
+        The 2nd parameter is the number, which specifies how many ele shpuld be removed from an array.
+        The rest parameters will be the values which are added to the array.
+
+
+Conditionals:
+ - Conditional statements are used to make decisions based on different conditions.
+ - If the processing logic requires conditions to decide so, the sequential flow of
+   of execution can be altered in 2 ways.
+    - Conditional execution: a block of one ore more statements will be executed if a
+      certain expression is true.
+    - Repetitive execution: a block of one or more statements will be repetitively executed
+      as long as certain expression is true.
+ - Conditionals can be implemeted in different ways:
+    - if
+    - if else
+    - if else if else
+    - switch
+    - ternary
+
+If: 
+ - In javascript if is the keyword which is used to check if a condition is true and based 
+   on the condition the block of code will be executed.
+ - If we have to implemet using if we need if keyword and the block of code wrapped in {}.
+ - syntax:
+   if(condition) {
+    // block of code
+   }
+
+If Else:
+ - So, a above the if section will work same. but this will add another section where if the
+   condition is not satisfied the other block of code will be executed.
+ - syntax:
+   if(condition) {
+    // block of code if condition is true.
+   } else {
+    // block of code if condition is false.
+   }
+
+If Else If Else:
+ - This is similar to if else, but it works on different conditions.
+ - syntax: 
+   if(condition) {
+      // block of code
+   } else if(condition) {
+      // block of code
+   } else if(condition) {
+      // block of code
+   } else {
+      // block of code.
+   }
+
+Switch:
+ - This is an alternative for if else if else. 
+ - The switch statements starts with switch keyword  followed by paranthesis and some cases.
+ - And cases contains block of code which will be executed. if the value of switch statement
+   matches with the case value.
+ - break is the keyword used after every case. and it terminates the execution so the code
+   execution does not go down after the condition is satisfied.
+ - default is default case where no case found for the case value.
+ - syntax:
+   switch(caseValue) {
+     case 1:
+       // block of code.
+       break;
+     case 2:
+       // block of code.
+       break;
+     case 3: 
+       // block of code.
+       break;
+     default:
+       // default execution.
+       break;
+   }
+
+Ternary:
+ - It is similar to of else, and it is a short way to write if else statement.
+ syntax: 
+   condition ? if true : if false
+
+
+Loops:
+ - We use loops to carry Repetitive tasks.
+ - Loops are worked on iterable objects.
+
+for: This can execute repetitive tasks easily by traversing on given iterable objects.
+while: We use while loop when we do not know how many iteration we go in advance.
+do while: Similar to while with just a small change, the code executes at lease for once.
+for of: It is similar to for loop but we can use this when we are not interested with the index
+        of an array for iteration.
+forEach: In forEach loop, we can have index and value both with us at the time of iteration.
+         it has a callback function and the function has 3 parameters.
+         1st parameter is the value of current iteration point.
+         2nd parameter is the index of current iteration point.
+         3rd parameter is the actual list or array.
+for in: The for in loop can be used with objects.
+let obj = {key: value}
+let user = {name: 'Pankaj', id: 123, address: "Pune"}
+
+Scope: 
+ - The place where the variabes can be accessible. 
+ - The scope is the basic part of any programming language.
+ - In JS we are using var, let and const to create variables. 
+   and by the used of these scope plays an important role.
+ - Variable scopes can be- 
+    - Window: Application global scope. This is the higher level of scopes.
+              We can access such variable in different files.
+    - Global: A globally declared variables can be accessed every where in the same file.
+              The rem global is relative to the file. it can be global to the file.
+    - Local: A locally created variables can be accessed within the functions.
+             var works on local scope
+    - Block: This is a part of local scope but it works within the recent brackets.
+             let and const works on block scope.
+
+Lexical scope: To access the value of an variable scopes are always checks the value from 
+               the recent defined scope.
+    Block->Local->Global->Window
+
+Object: 
+ - Everything can be an object and objects do have properties and properties will have values.
+ - An object can be created by key, value pair. the order of the keys are not reserved.
+ - We ue curly brackets to create an object.
+
+obj = {
+  key: value
+}
+
+obj = {
+  number: 1234,
+  string: "Some sring"
+}
+
+user = {
+  name: "Pankaj",
+  id: 123,
+  address: "Pune"
+}
+
+console.log(user.address);
+
+Object Methods:
+assign(): To copy an object without modifying the original object.
+keys(): To get the key or properties from an object.
+values(): To get the values of an object in an array.
+entries(): To get the keys and values from an array.
+hasOwnProperty(): To check if the key/property is exists or not. and return true if key is in the object.
+
+this keyword:
+- The value of this keyword is determined by how the function is called.
+- It cant be set by the assignment during execution.
+- If we wanted to update the value of this keyword we have to use "call" method.
+- call, apply and bind.
+- Call and apply are identically similar with a small difference of function parameters.
+   - call can have parameters as a comma seperated and apply will have parameters in array.
+- Bind: bind is also used for to change the context of this keyword but it returns the function.
+- bind and call is similar but bind returns a function.
+
+Functions:
+ - A function is a reusable block of code or programming statements designed to perform a certain task.
+ - In JS, a functions is declared by a function keyword followed by name and paranthesis.
+ - A function can expect a parameters enclosed in circular brackets.
+ - A function also can return a value based on the execution.
+ - Using functions we can achieve:
+     - clean and easy to read statements.
+     - reusable block of code
+     - easy to test.
+ - A functions can be created but couple if ways.
+    - Declaration functions
+    - Expressions functions
+    - Anonumous functions
+    - Arrow functions
+    - callback functions
+
+Callback functions:
+ - These are the functions that can be passed as a parameter to the other functions.
+ - Callback functions are used for handling asynchronous code.
+
+Arrow functions:
+ - It is an alternative to write a functions in JS. it is a shortest way to write a functions.
+ - Expression functions and arrow functions have some minor differences.
+ - Arrow functions uses arrow instead of function keyword.
+
+
+In-built Functions in JS(Functional programming):
+ - It is allow us to write easy, shorter code, clean and also it solves complex problems.
+ - It also help us to to think in different ways. while solving a complicated problems
+   on top of traditional way.
+
+forEach
+includes
+assign
+keys
+values
+entries
+
+map: 
+ - It is used for iterate on an array.
+ - This method modifies the elements from an array.
+ - We use map method only on array and it always returns an array.
+ - Map returns an array with same number of elements on which array we applied map.
+ - Map returns a callback function as a parameter. and call back function will allow us to have
+   1. current element
+   2. index
+   3. list: array
+filter: 
+ - It works on the literal meaning of filter. it filter outs the elements from an array 
+   based on some criteria.
+ - It is used  like a forEach and map function on arrays and it returns an array with 
+   filtered elements.
+ - filter returns a callback function as a parameter. and call back function will allow us to have
+   1. current element
+   2. index
+   3. list: array
+reduce: 
+ - Like forEach, map, filter reduce is also used with an array and returns a single value.
+ - Single value could Primitive or non-Primitive.
+ - We used reduce to sum all numbers in an array together. or to multiply items in an array
+   to concatenate items.
+ - filter returns a callback function as a parameter. and call back function will allow us to have
+   1. previous value
+   2. current element
+   3. index
+   4. list: array
+find: 
+  - If we are interested to get the first occurence of a certain item/element in any array.
+      we can use find method.
+  - Unlike map and filter, find just return a single element from an array.
+  - Find returns an object if the conditions satisfies or it returns undefined.
+  - find returns a callback function as a parameter. and call back function will allow us to have
+   1. current element
+   2. index
+   3. list: array
+findIndex:
+  - findIndex is works as find but it returns index instead of object.
+  - findIndex returns a callback function as a parameter. and call back function will allow us to have
+   1. current element
+   2. index
+   3. list: array
+some:
+  - The some method is used with an array and it returns a boolean value.
+  - If one or some of the items satisfy the criteria the result will be true else it will be false.
+  - some returns a callback function as a parameter. and call back function will allow us to have
+   1. current element
+   2. index
+   3. list: array
+every:
+  - Every is somehow similar to some, but it expects the condition should satisfy for every element in an array.
+  - This method is also return the boolean value.
+  - every returns a callback function as a parameter. and call back function will allow us to have
+   1. current element
+   2. index
+   3. list: array
+
+
+
+Classes:
+ - In JS we can achive object oriened programming features.
+ - Everything is JS is an object, with its properties and methods.
+ - Classes are blueprints to create an objects.
+ - The class defines attributes and the behaviour of the object, while an object 
+   on the other hand represents the class.
+ - Once we have created a clas we can create objects whenever we want.
+ - Creating an object from a class is called class instantiation.
+ - In object section we have seen the objects are singleton.
+ - If we want to get the similar objects using object then we havve to write it again.
+ - However classes allows us to create many objects, this helps to reduce amount of code and
+   repetition of code.
+ - To create class we have to use "class" keyword followed by class name.
+ - We can have block of code inside the "curly brackets" that defines the class for us.
+ - We have a "constructor" method inside the class. that constructs the objects for us.
+ - We have 2 types of constructors:
+    1. default
+    2. Parameterised 
+ - "methods" are nothing but the functions inside the class and we can call those methods 
+    on objects directly.
+
+ - syntax: 
+   class ClassName {
+    // block of code......
+   }
+ - Example: 
+   class Person {
+     properties...
+     methods...
+   }
+
+ - class instantiation:
+   class Person {
+    block of code .....
+   }
+   // create an object for class
+   let person = new Person();
+   console.log(person)
+
+- syntax with constructor:
+
+  class Person {
+    // default constructor
+    constructor() {
+      // constructs an object.
+    }
+  }
+
+  class Person {
+    // Parameterised constructor
+    constructor(param1, param2, ...) {
+      // constructs an object.
+    }
+  }
+
+Class methods:
+ - The constructor inside a class is a built in which allows us to create a blueprint for the object.
+ - methods in classes are nothing but a functions wraped inside a class.
+
+
+getter and setter:
+ - To get the values of a class properties we use getter methods.
+ - To set/update the values to the class properties we use setter methods.
+
+
+static method in class:
+ - Static methods cannot be called on object but we can call them on class name directly.
+ - Static methods are created to execute the functionality which is not required on class.
+
+private properties:
+ - We have seen public properties till now.
+ - These properties cannot accessed by the instance. 
+ - We can use these properties or methods inside the class only.
+
+Inheritance:
+ - Using Inheritance we can access all the properties and the methods of the parent class.
+ - Parent class(methods, properties) -> Child class(methods, properties, access parent methods and properties)
+ - To reduce repetition of code.
+ - e.g we have a parent class Person(firstName, lastName, address).
+ - child classes(Student, Employee)
+ - To use Inheritance for a child class we have to use extends keyword.
+
+ES6 features:
+- ES6 stands for ECMAScript 6, and it is created to standardize the javascript.
+- ES6 is the 6th version of ECMAScript and released in 2015.
+- different features released under ES6 are:
+   - classes
+   - let and const keyword
+   - arrow functions
+   - for-of loop
+   - default parameter value
+   - template literal (`${value}`)
+   - spread(...) and rest(...) operator: 
+      - Both are having the same syntax but some minor differences.
+      - Spread operator will spread the elements from an array and 
+        spread the properties from an object.
+      - Rest is also used with Arrays and objects.
+      - Rest operator will move all elements or properties to new variable.
+   - destructuring:
+      - Destructuring is used to unpack array or objects, and we can assign 
+        those to a distict variables.
+      - We can write a clean and readable code.
+      - Syntax: 
+         let nums = [1,2,3,4,5]
+         let nums1 = [...nums]; // rest.
+         let [0thIndexEle, 1stIndexEle, ..... nthIndexEle] = numbers;
+         let obj = {name:"Pankaj", id: 1234, address: "Pune"}
+         let {address} = obj;
+      - Array: We can unpack an array elements and create distinct variables.
+      - Objects: We can unpack object properties and create distinct variables.
+   - modules(export/import)
+   - Promise:
+      - The Promise object represents the eventual completion(or failure) of an asynchronous
+        operations and resulting a value.
+      - The Promise function has 3 states.
+         1. resolve: When promise successfully retrun an output.
+         2. reject: When promise gets an erros.
+         3. pending: When promise is in execution phase.
+   - asyn/await ES7: to handle asynchrounous execution.
+   - Map and Set data structures:
+Map: 
+ - The Map object holds key-value pairs and remembers the original insertion order of the keys.
+ syntax: 
+ let user = new Map();
+ user.set('name', "Pankaj") // to add a properties into a map data structure.
+ user.delete('name') // To delete a property from an map object.
+ user.get('name') // to get the value of a key.
+
+Set:
+ - Set in JS stores the unique elements.
+ - Set is treated like an array but internally its not an array.
+
+
+HTML:
+ - HTML stands for Hyper Text Markup language.
+ - It is used for creating a web pages.
+ - It describes the structure of web page.
+ - It provides some of the elements those are used to create web pages.
+ - HTML elements are nothing but Textfields, Headings, Paragraphs, Buttons, etc.
+
+ - Basic Structure of HTML:
+    - <!DOCTYPE html>: It defines that this documents is an HTML5 document.
+    - <html>: This is the root element of an HTML page.
+    - <head>: It contains the meta information about the HTML page.
+    - <title>: This element specifies a title of the web page. It is shown in the browser's 
+      title bar or in the page's tab.
+    - <body>: This element defines the documents body, and it is a container for all the 
+      visible contents such as headings, paragraphs, images, tables, links, etc.
+    - Some of the HTML elements/tags.
+      - headings(h1-h6):
+        - Headings are titles or subtitles that you want to display on web page.
+        - <h1> defines the most important heading where <h6> defines the lease imp.
+      - list(ul, ol, li):
+        - ul: unordered list
+        - ol: ordered list
+        - li: list item
+      - input(text, buttons, password, number, email, datepicker, checkbox, radio etc.)
+       text: To retrieve text values from the user.
+       button: To add button on the UI and add action to it.
+       password: To accept password from the user.
+       number: To accept numbers.
+       email: To accept email.
+       datepicker(date, datetime, datetime-local): To select date and time.
+       checkbox: To select multiple options from the list.
+       radio: To select one out of many.  
+       range: To select range out of specified values
+      - labels(label): To add labels
+      - textarea: If user wants to add more details to the specific field. we use textarea.
+      - Buttons: To add buttons in the page and actions on the button.
+      - Links or anchor tag(a):
+        - HTML links are hyperlinks, you can click on a link and jump on other document or page.
+        - When the mouse pointer moves around the link, it changes to small hand icon.
+      - images(img): To add images, photos to the page.
+      - container or Block level elements:(div, p, section):
+        - Block level elements are always starts on a new line.
+        - A browser automatically add some space before and after the element.
+        - It uses full width that is available.
+        - 2 most common block level elements are. <p> and <div>
+      - inline elements: It adds new element on the same line.
+      - <br/>: It is used to add empty line
+      - select(select, option):
+        - This element is used to create drop-down list/menu.
+        - This element is often used in forms to get user input.
+        - We have to add different options as list item.
+      - tables(table, header(th or thead), columns, rows(tr), td, tbody):
+        - To show data in tabular format we use table element.
+        - table: It represents the starting of the table.
+        - th: It defines header cell in a table.
+        - tr: It defines row in a table.
+        - td: It defined a cell in a table.
+        - thead: Groups the header content in a table.
+        - tbody: Groups the body content in a table.
+
+Attributes: 
+ - HTML attributes provides additional information to the html elements
+ - An HTML elements can have zero or more attributes tha defines the behaviour of html element.
+ - attributes usually come in name/value pair. e.g name="Value"
+
+
+CSS:  (https://www.w3schools.com/css/default.asp)
+What is CSS? 
+1. CSS stands for Cascading Style Sheets
+2. CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+3. CSS saves a lot of work. It can control the layout of multiple web pages all at once
+4. External stylesheets are stored in CSS files
+
+CSS syntax: A CSS rule consists of a selector and a declaration block.
+selector      declaration   declaration
+   h1       { color: brown; font-size: 50px; }
+
+Selector: The selector points to the HTML element you want to style.
+declaration block: It contains one or more declaration(style properties) separated with semiolons. And declaration 
+block is surrounded with curly brackets.
+
+What is Selector? 
+1. A selector in CSS selects the HTML element(s) you want to style.
+1. CSS selector are used to find (or select) the HTML elements.
+
+Selector Categories:
+1. Simple Selectors: it selects elements based on element name, id, class, etc.
+  1. element name: 
+    h1 {
+      color: brown;
+      font-size: 50px;
+    }
+  2. id(#) selector:
+    #paragraph-1 {
+      font-size: 20px;
+      text-align: center;
+    }
+  3. class(.) selector:
+    .div-class {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    - If we have class and id both for the same element so the preference goes to id.
+
+2. Combinator selectors: It selects elements based on the specific relationship between them.
+  table tr th {
+    color: blue;
+  }
+3. Pseudo-class-selector: It selects based on a certain state.
+4. Pseudo-element-selector: It selects elements or style a part of elements. 
+5. Attribute selectors: It selects elements based on an attribute or attribute value.
+
+element -> class
+
+
+
+How to add Css?
+1. Inline CSS: inline css can be placed with HTML element directly
+  e.g. Inline styles are defined within the style attribute of the HTML element.
+    <element style="color: red; font-size: 20px">
+
+2. Internal CSS: Internal CSS can be placed within the same HTML file.
+  e.g Internal styles are defined within the <style> element, 
+      inside the <head> section of an HTML page.
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      h1 {
+        color: brown;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+  </body>
+</html>
+
+3. External CSS: External CSS can be placed from different file.
+  e.g With an external style sheet, we can change the look of an entire website by 
+  changing just one file.
+    External styles are defined within the <link> element, inside the <head> section.
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+          <link rel="stylesheet" href="basicintro.css">
+        </head>
+        <body>
+        </body>
+      </html>
+
+
+Opacity: this property is used to set blur to either high or low.
+
+
+CSS backgrounds:
+1. background-color
+2. background-image
+3. background (options)
+
+CSS borders: 
+1. dotted border 
+2. dashed
+3. solid
+4. double
+5. groove
+6. ridge
+7. inset
+8. outset
+9. none
+10. hidden 
+11. mix
+
+Border options:
+ 1. widht: border-width
+ 2. color: border-color
+ 3. sides: border-top-style, border-right-style, border-bottom-style, border-left-style 
+ 4. shorthand: border: width, style, color
+ 5. rounded: border-radius
+
+
+Margins: Margins are used to create space around elements, outside of any defined borders.
+  There are properties for setting the margin for each side of an element(top, right, bottom, and left);
+  
+  1. margin-top.
+  2. margin-right.
+  3. margin-bottom.
+  4. margin-left.
+  
+  All the margin properties can have the following values:
+    1. auto - the browser calculate the margin.
+    2. length - specifies a margin in px, pt, cm, etc.
+    3. % - specifies a margin in % of the width of the containing element.
+  
+  Margin - Shorthan Property;
+  margin: top, right, bottom, left.
+  e.g.
+        margin: 20px, 20px, 20px, 20px; (It sets margin to top, right, bottom and left to 20px)
+        margin: 20px, 20px, 20px; (It sets margin to top, right and bottom to 20px)
+        margin: 20px, 25px; (It sets margin to top and bottom to 20px and right and left to 25px)
+        margin: 25px; (it sets all four margins to 25px)
+
+
+Padding: Padding is used to create space around an elements content, 
+          inside of any defined borders.
+
+  There are properties for setting the padding for each side of an element(top, right, bottom, and left);
+  
+  1. padding-top.
+  2. padding-right.
+  3. padding-bottom.
+  4. padding-left.
+  
+  All the padding properties can have the following values:
+    1. auto - the browser calculate the margin.
+    2. length - specifies a margin in px, pt, cm, etc.
+    3. % - specifies a margin in % of the width of the containing element.
+  
+  Padding - Shorthan Property;
+  padding: top, right, bottom, left.
+  e.g.
+        padding: 20px, 20px, 20px, 20px; (It sets padding to top, right, bottom and left to 20px)
+        padding: 20px, 20px, 20px; (It sets padding to top, right and bottom to 20px)
+        padding: 20px, 25px; (It sets padding to top and bottom to 20px and right and left to 25px)
+        padding: 25px; (it sets all four padding to 25px)
+
+
+Height/Width: The heigth and width properties are used to set the heigth adn width of an element.
+
+Navigation bar: A navigation bar is basically a list of links. and that can be navigated to other pages.
+
+Vertical 
+Horizontal
+
+Dropdowns: We can have a functionality where more options can be seen on single element. 
+
+hover dropwdowns : once we move our cursor to the element, other options start showing.
+click dropwdowns : once we click on the element, other options start showing.
+
+Tables: Tables can hold data of different entities in the for of row and column.
+
+Images: We can add different styles to the images to show them in different ways on the page.
+  border-radius: it changes images corners to round shape. if we set it to 50% it will change to rounded one.
+  
+
+
+
+
+React: 
+Getting Started React
+This section covers prerequisites to get started with React. You should have a good understanding of the 
+following technologies:
+
+HTML
+CSS
+JavaScript
+
+If you have the skills mentioned above, you will enjoy doing React. 
+The React course contains everything you need to know about react. In every section, 
+it has some exercises and mini-projects, and it is recommended to work on them. 
+
+
+1. What is React?
+React is a JavaScript library for building a reusable user interface(UI). 
+It was initially released on May 29, 2013. The current version is 18+ and somehow it is stable. 
+React was created by Facebook. React makes creating UI components very easy. 
+The official React documentation can be found https://react.dev/learn. When we work with React we do not 
+interact directly with the DOM. React has its own way to handle the DOM(Document Object Model) manipulation.
+ React uses its virtual DOM to make new changes and it updates only the element, that needs changing. 
+ Do not directly interact with DOM when you build a React Application and 
+ leave the DOM manipulation job for the React virtual DOM. In this challenge, 
+ we will develop 10-15 examples using React. A web application, or a website, 
+ is made of buttons, links, forms with different input fields, header, footer, sections, 
+ articles, texts, images, audios, videos and boxes with different shapes. We use react to 
+ make a reusable UI components of a website.
+
+To summarize:
+
+React was released in May 2013
+React was created by Facebook
+React is a JavaScript library for building user interfaces(UI)
+React is used to build single page applications - An application which has only one HTML page.
+React allows us to create reusable UI components
+React latest release is 18+ React versions
+React official documentation can be found https://react.dev/learn.
+
+
+2. Why React?
+React is one of the most popular JavaScript libraries. Many developers and companies have been using 
+it for the last couple of years. Its popularity has been growing fast and it has a huge community. 
+How do we measure popularity? One measure of popularity could be GitHub repository stars, watchers and forks. 
+Let us compare the popularity of React and Vue. As of today, the popularity between the two most popular 
+JavaScript looks like as shown on the diagram. From the diagram, you can speculate the most popular 
+JavaScript library. You may look at the number of watchers, stars and forks for both React and Vue.
+These alone will not be a very good measure of popularity, but still it tells a little bit about 
+the popularity of the two technologies. If I have to recommend another JavaScript library next to React,
+it would be Vue.js.
+
+To summarize:
+React uses virtual DOM to perform operations on current page and DOM manipulation.
+React is one of the most popular JavaScript libraries.
+Its popularity has been growing fast and it has a huge community.
+We can built SPA(Single page application) using ReactJS
+If we need to add new library to react it is very easy to integrate.
+e.g. routing(To navigate from one page to another), state management(Redux), DOM, charts, etc. 
+fast
+modular
+High Job opportunity.
+
+3. JSX(JavaScript XML): 
+JSX allows us to write HTML elements with JavaScript code.
+JSX makes it easier to write HTML elements and JavaScript.
+Browser will not understand JSX. We need to transpile the code to the browser understandable code.
+To transpile the code we need to use babel.js library. After transpile the code will be in pure JavaScript form.
+
+JSX syntax;
+
+const jsxElement = <h1>I am a JSX element</h1>
+cosnt jsxDiv = <div><p class="dom-class-padding">DOM(Documnet object model) is nothing but a page tree. but in the form of JS object.
+    HTML document is structured as a JavaScript Object. Every HTML element has a different properties 
+    which can help us to manipulate it. It is possible to get, create, append or remove HTML elements 
+    using JavaScript.</p></div>
+
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+NodeJS: To add npm packages, to run application, to write different scripts, etc.
+ - Node is a JavaScript runtime environment that allows JavaScript to run on the server.
+ - Node was created in 2009. 
+ - To create React boilerplate or to start creating react applications we need node to be installed in our system.
+ - The react application start by default at localhost or "http://127.0.0.1/" 3000.
+ - 'create-react-app' this npm package can configure a node server for the React application.
+ - To download and install node we can find it on https://nodejs.org/en/download/.
+ - To verify if node js installed on the system or not we just need to run following command:
+    node -v
+    this command will return node version if node js is installed or it will throw an error that command not found.
+    npm -v
+    This command will return either npm is installed or not in the system. or it will throw an error that command not found.
+
+Module: Module is nothing but a container which contains different function and we can reuse those functions in the application.
+ - A single or multiple functions, that can be exported and imported when needed.
+ - Export: Export means export or make functions available to be used in different files.
+ - Import: Import means we can use the functions which are exported from different files.
+
+Package: A package is module or collection of modules. React, ReactDOM are packages
+
+NPM(Node Package Manager): 
+ - NPM was created in 2010 and we do not need to install npm separately.
+ - NPM is a default package manager for node js. 
+ - It allows users to consume and distribute JavaScript modules that are available in the registry.
+ - Currently there is more than 350000 packages in the npm registry.
+ - The number of downloads show the popularity of the package.
+
+Create-react-app: this is nothing but a npm package that creates a boilerplate for React.
+ - To install create-react-app module or package, we can run following commands:
+    - npm install create-react-app
+    - npx create-react-app project-name
+
+React boilerplate: this will create all the required files to start creating react application. and we can 
+    add different files, components, utilities, etc. to the boilerplate.
+
+ - create-react-app will create multiple folders and files,
+    1. node_modules: Stores all the necessary node(npm) packages of the React applications.
+    2. Public: public folder will contains different files that can be accesed in other files.
+        1. index.html: The only HTML file we have in the entire application.
+        2. favicon.ico: This is the React icon file.
+        3. manifest.json: This is used to make the application a progressive web app.
+        4. other images: open graph image. 
+        5. robots.txt: information. if the website allows web scrapping.
+    3. src: src folder is our source. 
+        1. App.css, index.css: CSS files for the React application.
+        2. index.js: A file which allows to connect all the components with index.HTML. 
+            And its a starting location of our React application
+        3. App.js: A file where we usually import most of the presentational components.
+        4. serviceWorker.js: This is used to add progressive web app features.
+        5. setupTests.js: to write testing cases.
+    4. package.json: This file contains information about our Application and also contains list of packages
+        the application uses.
+    5. .gitignore: This files allows files and folders not to be pused on github.
+    6. README.md: documentation file.
+    7. package-lock.json: A means to lock the version of the package.
+
+
+Components in React:
+ - Component is nothing but a heart of a react.
+ - A React component is a small, reusable code, which is responsible for one part of the application UI or web page.
+ - A react application is an aggregation of components.
+ - React can help us to build reusable components.
+ - In React we assemble or collect different components together to create an application.
+ - We use JavaScript function or classes to make components.
+ - Components can be functional or class-based components.
+ - Components can be: 
+    - Functional Component/Presentational Component/Stateless Component/Dumb Component
+    - Class Component     /Container Component     /Statefull Component/Smart Component
+ - Functional and Class based component differentiation cannot be found on the latest version of react.
+
+Functional Component:
+ - We can create functional component using javascript functions.
+ - Functional components are mostly a presentational/informative component.
+ - We have to return jsx from functional components.
+ - syntax:
+    const componentName = () => {
+        return (<div>
+                    <h1>Test</h1>
+                </div>);
+    }
+
+Props: 
+ - Props is a special keyword in React that stands for properties.
+ - Props are mainly used to pass data from one component to another components.
+ - Mostly propes are passing data from parent component to child component.
+ - We can say props is a data carrier or a means to transport data.
+
+Prop drilling: To send data from parent components to nth level of child components.
+To avoid prop drilling we have 2 ways.
+1. Redux(State management of an application)
+2. Context API: Context API is available in latest versions of React(v16.8+).
+
+parent    ->     child(parent)     ->      child(parent)     ->     child
+app.js    ->     TestComponent     ->      TestFunctional    ->    CoursesList and TableComponent
+
+exercises: 
+1. Create a functional component to show current month.
+    Sun Mon Tue Wed Thu Fri Sat
+                         1   2
+     3   4   5   6   7   8   9
+
+
+Class Component:
+ - Class based component can have state(Component state).
+ - Class based companies can have lifecycle hooks(methods)
+ - Class based components are made with JavaScript classes. and it inherits from React Component class.
+ - We stated that props is a means to send data from one component to another or we can call it that 
+   props is a data carrier. therefore, we should handle props in class based components too.
+ - We can access props in class based component using keyword "this". 
+
+
+syntax: 
+basic class based syntax without importing react component.
+class component_name {
+    constructor(props) {}
+}
+ class based component using react Component.
+ class component_name extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+ }
+
+State: 
+ - The english meaning of state is the particular condition that someone or something is in at a specific time.
+ - State is nothing but a object in react component. it lets the component re-render when state data changes.
+ - We can set a state to a class based component in constructor function or outside the constructor function.
+ - We do not change the state directly, instead we have to used React method "setState()" to update the state.
+
+Conditional Rendering:
+ - Conditional rendering is a way to render different JSX or component at a different condition.
+ - We can implement Conditional Rendering using regular if and else, ternary operator and "&&".
+ syntax: 
+ if-else: 
+    let jsx;
+    if(true) {
+        jsx = some jsx or component
+    } else {
+        jsx = null
+    }
+
+    <div>
+        {jsx}
+    </div>
+
+ ternary: 
+ (true) ? jsx or component : null
+
+ &&: 
+ {true && jsx or component}
+
+ Exercises on Conditional Rendering.
+
+1. Create a boilerplate for conditional rendering and 
+   Component should change background color if the season of the year is:
+    Autumn: "darkslategrey"
+    Winter: "violet"
+    Spring: "cadetblue"
+    Summer: "default"
+
+2. Create a boilerplate for conditional rendering and
+   Component should change background color if the time of the day:
+    Morning: "darkslategrey"
+    Noon: "violet"
+    Evening: "cadetblue"
+    night: "default"
+
+
+
+React Project Folder Structure and file Naming(Best Practices):
+ - There is no strict way to use single folder structure or file naming in React Project.
+ - Mostly these kind of decisions made by the team.
+ - Sometimes a company may have a developed guidlines about what code convensions to follow, folder structure and
+   file naming.
+ - There is no right or wrong way of structuring a react project but some structures are better than the others 
+   for Scalability, Maintainability, Ease of working on files and easy to understand the project structure.
+
+File Naming: 
+ - The name of files should be in camelCase. e.g employeeDetails.jsx, Navbar.js, sideNavbar.jsx, etc.
+ - Mostly file names should be a descriptive one.
+
+Folder: 
+ - We can put all images, icons, and fonts in public(assets) folder. and CSS in styles folder.
+ - We can create different folders for different components based on the current features(requirements).
+    e.g src
+          ->components
+            ->Orders(this folder would contains other components folders or files)
+            ->UserDetails(this folder would contains othe components folders or files)
+            ->Inventory(this folder would contains othe components folders or files)
+
+Events: 
+ - An event is an action or occurence recognised by a web page.
+ - To make an event more clear lets use the daily activities we do when we use a computer such as,
+    - Mouse Events(Scorll, onClick, onDoubleClick, onRightButtonClick, etc.),
+    - Hover on a image or text or any HTML elements(onHover),
+    - Pressing a keyboard(keydown, keypress).
+ - Haandling events in React is almost similar to handling events on DOM elements using pure JS.
+ - Key Points:
+    - React evvents namesd using CamelCase, rather than lowercase.
+    - With JSX we can pass functiona as the event handler instead of string.
+
+React has following events on different elements:
+  - onClick
+  - onChange
+  - onBlur
+  - onMouseMove
+  - onKeyDown
+  - onCopy
+
+Exercises:
+1. Create a counter wich has 3 buttons
+    - Increase
+    - Decrease
+    - Reset
+2. Create a form for an EmployeeDetails and strore those details in state.
+    - Form will contain: employeeId, age, firstName, lastName, gender, designation, salary, department, etc.
+    - e.g state will have 2 fields
+        1. Employees: this is an array holding all employee details.
+        2. Employee: this ia an object holding all the current employee details.
+
+
+Forms:
+ - Form is used to collect the data from user. Once in a while we use form to fill our information on a paper or on a website.
+ - Mosty we fill forms to sign up, sign in or to apply for a job we fill different form fields to 
+    submit our data to remote database.
+ - We encounter different form fields when we fill a form such as simple text, email, password, mobile number,
+    date, checkbox, radio buttons, option selections(dropdowns), text area, etc.
+ - Forms will get 2 types of Components:
+        Controlled
+        Uncontrolled 
+
+    Types of form fields:
+        1. Textarea: <textarea>
+        2. Textfield: <input type="text" />
+        3. Number: <input type="number" />
+        4. Range: <input type="range" />
+        5. Email: <input type="email" />
+        6. Password: <input type="password" />
+        7. Telephone: <input type="tel" />
+        8. Checkbox: <input type="checkbox" />
+        9. Radio buttons: <input type="radio" />
+        10. Date: <input type="date" />
+        11. Button/Submit: <input type="button/submit" />
+        12. Select: <select>
+
+Note: We will check "Validator.js" in future sessions.
+Exercises: 
+1. Create an application form for a job portal.
+2. Add validations on some of the fields. (firstName, email, file)
+3. Create an Uncontrolled component for the same application form.
+
+Uncontrolled Component:
+ - Till now we have seen the controlled component where the data can be handled by React Component.
+ - Uncontrolled components, where form data is handled by the DOM itself.
+ - To write an Uncontrolled component, instead of writing an event for every state update, we can use ref to get
+   form values from the DOM.
+
+1. import React.
+2. if we are creating class components. extends Component. and write render method and return jsx.
+3. if we are creatign functional components return jsx.
+4. export default ComponentName
+
+
+Component Life Cycles(Methods):
+ - Component life cycle is the process mounting(Create), updating and unmounting(destroy) a component in a React application.
+ - We can associate a component life cycle with the process of human growth.
+   - Birth(Mounting)
+   - Adult(Updating)
+   - Death(Unmounting)
+
+Mounting Phase:
+ - Reandering or putting a React component into the DOM is called Mounting.
+ - The following built-in methods run in the given order during mounting of a React Component.
+    1. constructor()
+    2. static getDerivedStateFromProps()
+    3. render()
+    4. componentDidMount();
+
+constructor():
+ - The constructor method is executed before any other methods.
+ - This is place where we can set the initial state of a component.
+ - In class we use constructor parameter to inherit from parents and in React to the constructor take a props
+   parameter and the super method has to be also called.
+
+static getDerivedStateFromProps(): 
+ - As we can understand from the name, this method derives a state from props. 
+ - This method is called right before Rendering the component in the DOM.
+ - This is right place to set the state object based on the initial props.
+ - This method returns the updated state.
+ - This method executes whenever there is a change in state.
+
+render(): 
+ - The render method is a required method when we create a class-based component.
+ - The render method is where we return JSX code and it will be seen on the UI.
+ - The render method renders or executes whenever there is a change in state.
+ - Do not set your state inside render method. do not call this.setState() inside render method.
+
+componentDidMount(): 
+ - This method is called right after the render method. 
+ - This is a place to setting time intervals and calling an API.
+
+
+Updating Phase:
+ - After a component has been mounted on the DOM. it can be updated when a state or props change.
+ - An update of React component can be caused by changes of props or state.
+ - The following built-in methods run in the given order during Updating of a React Component.
+   1. static getDerivedStateFromProps()
+   2. shouldComponentUpdate()
+   3. render()
+   4. getSnapshotBeforeUpdate()
+   5. componentDidUpdate()
+
+static getDerivedStateFromProps(): As we discussed earlier this is the similar one.
+
+shouldComponentUpdate(): 
+ - This method will return a boolean value.
+ - If method return true then component will be updated otherwise there will be no update.
+
+render(): As we discussed earlier this is the similar one.
+
+getSnapshotBeforeUpdate(): 
+ - After shouldComponentUpdate returns true this method will be called.
+ - This is the place where we can get the previous props and state values before updating the component.
+
+componentDidUpdate():
+ - This method will be called right after the component update.
+ - This method is also having the access to prevProps and prevState along with snapshot.
+
+
+Unmounting Phase:
+ - The unmounting phase removes component from the DOM.
+ - componentwillUnmount is the only method gets called when component is unmounted.
+componentwillUnmount()
+
+Higher Order Components(HOC):
+ - Higher order component is similar to higher order functions in javascript. a higher order function is a function
+    that takes another function as a parameter or return another function.
+ - Higher order component takes a component as a Props or parameter and return another component
+
+ e.g 
+ import React from 'react'
+ const higherOrderComponent = (Component) => {
+    return (props) {
+        return <Component {...props} />
+    }
+ }
+
+How can we call an API through React application.
+Fetch and Axios: To call an API through React applications.
+ - Fetch is nothing but a javascript function that can be used for API calls.
+ - Axios is third party library with some extra features added on top of fetch.
+ - To install axios in react app we need to run command "npm install axios".
+
+React Router:
+ - We may heard the word route is used for navigating from one place to another.
+ - The literal meaning of route is a path or a way to get to somewhere. the meaning in react is similar.
+ - When we implement a React router the different components get rendered on the index.html at the same time or 
+   different time based on the different logic or conditions.
+ - React router is by itself a React Component which allows you to navigate betweeen react components.
+ - To use React Router we need to wrap our app component inside router component.
+ - To implement routing in React application we need to install "react-router-dom" package from npm.
+    "npm install react-router-dom"
+ - React Router DOM will give us different components:
+   1. BrowserRouter
+   2. Route
+   3. Navlink
+   4. Nested routing
+   5. Redirect 
+
+BrowserRouter:
+ - This is a parent component which allows to wrap the application route.
+ - Using BrowserRouter we can access the browser history.
+ - Sometimes it can be renames as Router.
+
+Route: 
+ - The Route Component allows us to navigate between components.
+ - The Route component has required 2 props. 
+     1. path: The path prop is where the component has to be rendered 
+     2. component: The component props is which the component has to be rendered.
+
+Navlink:
+ - The Navlink Component allows us to navigate each Component.
+ - It takes a "to" props. 
+ - The Navlink is a component on top of anchor tag. Clicking on navlink does not refresh a page, which is the Best
+   quality of using router.
+ - Our route and navigation works perfectly as long as the route is found.
+
+Nested Routing:
+ - The nestet routing help us to route from one route to another with parent and child routes.
+
+Redirect: (Will check and come back later.)
+ - 
+
+
+React Hooks:
+ - React Hooks are introduced in version 16.8.
+ - It allows us to use state, lifecycle methods and other react features without writing a class Component.
+ - If we are using hooks we can have only functional components in the entire application.
+ - A hook is a special function that lets you "Hook into" React features.
+ - e.g useState is a hook that lets you add React State to function components. 
+
+Basic criteria of hooks:
+  1. The hooks are always written as a first thing in the functional component.
+  2. The hooks are always starts with use word. e.g useState(), useEffect(), etc.
+
+
+Basic Hooks:
+   1. useState(): it returns a stateful value. and a function to update it.
+    We can assign a default/initial value to the state as a argument to the useState().
+    The setState_var() function is used to update the state. and it accepts the new state value and renderes the component.   
+   2. useEffect(): IT can indirectly replaces the 
+    componentDidMount(), componentDidUpdate(), getSnapshotBeforeUpdate() and componentwillUnmount() methods.
+   3. useContext(): This hook can be used to transfer data from one component to other.
+    We can share the data to the nested components as well.
+
+
+React fragments:
+ - A common pattern in react is for a components to return multiple elements.
+ - Fragments lets you group a list of children without adding extra node to the DOM.
+  Syntax:
+   <React.Fragment>
+     ...child nodes/elements
+   </React.Fragment>
+   Short Syntax:
+   <>
+     ...child nodes/elements
+   </>
+
+Context/Redux:
+
+Redux:
+ - Redux is a predictable state container for JavaScript applications.
+ - To use Redux in react applications we need to install 2 packages.
+   1. redux
+   2. react-redux
+ - It is commonly used with React to manage a state of an application in centralized store(Application state).
+ - Redux has Provider that adds a store to the application and wraps it into.
+ - Actions are dispatched to update the state.
+ - Reducers: reducers are nothing but a pure functions that handles the store(state) change.
+ - Pillars of redux: 
+    1. Store:
+     - The store holds the entire state of the application. it is a single javascript object that represents the state tree.
+     - The state within the store is read-only, and the changes ae made by the dispatching actions.
+    2. Actions: 
+     - Actions are plain javascript objects that describe changes in the application state.
+     - They are dispatched to the store, and they must have type property indicating the type of a action.
+     - Additionally data property can be included as a state value.
+    3. Reducers:
+     - Reducers are pure functions that specifiy how the applications state changes in response to the action.
+     - They take the current state and an action as arguments, and they return a new state without modifying the existing state.
+     - Reducers combine to form a overall state management logic.
+
+Connect method:
+ - The connect method is provided by the react-redux package to connect a react component to the redux store.
+ - It allows components to access the state from the redux store and dispatch actions.
+ - The connect function takes 2 main parameter.
+   1. mapStateToProps: A function that maps the redux state to the components props. It defines which parts of the
+      redux state should be available to the connected component.
+   2. mapDispatchToProps(optional): A function or an object that defines the action creators which will be available
+    to the connected components. It allows the component to dispatch actions without directly referencing the store.
+
+Provider:
+ - The provider is a component provided by the react-redux package. 
+ - It serves as a wrapper around your react application, allowing the redux store to be accessible to all the components.
+ - The provider component takes a store prop, which is the redux store we have created for the application.
+
+
+Context/Context API/useContext:
+ - Context is a way to pass data through the component tree without having to pass props down manually at every level.
+ - Its particularly useful when certain data, like authentication status or themes, needs to be accessible by many components.
+ - To use context, we typically create a context with React.createContext().
+ - Then we can use Provider to wrap components that need access to the context.
+ - Consumers can access the context using useContext hook or Context.Consumer component.
+ 

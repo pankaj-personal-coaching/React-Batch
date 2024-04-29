@@ -1,0 +1,9 @@
+.container {
+  background-color: antiquewhite;
+  height: 100%;
+  padding: 25px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding-left: 150px;
+}

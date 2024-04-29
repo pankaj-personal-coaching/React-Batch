@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Example</title>
+    <script>
+      function submitData() {
+        let id = document.getElementById("id").value || "";
+        let name = document.getElementById("name").value || "";
+        let designation = document.getElementById("designation").value || "";
+        let salary = document.getElementById("salary").value || "";
+        let city = document.getElementById("city").value || "";
+        console.log(id, name, designation, salary, city);
+        let tr = document.createElement("tr");
+        let thId = document.createElement("th");
+        thId.textContent = id;
+        tr.appendChild(thId);
+        let thName = document.createElement("th");
+        thName.textContent = name;
+        tr.appendChild(thName);
+        let thDesignation = document.createElement("th");
+        thDesignation.textContent = designation;
+        tr.appendChild(thDesignation);
+        let thSalary = document.createElement("th");
+        thSalary.textContent = salary;
+        tr.appendChild(thSalary);
+        let thCity = document.createElement("th");
+        thCity.textContent = city;
+        tr.appendChild(thCity);
+        let table = document.getElementById("table");
+        table.appendChild(tr);
+      }
+
+      function getIdValue(event) {
+        let id = event.target.value;
+        alert(id);
+      }
+    </script>
+  </head>
+  <body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+    <div>
+      <div>
+        <label for="id">Id</label>
+        <input type="text" name="id" id="id" />
+      </div>
+      <br />
+      <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <br />
+      <div>
+        <label for="designation">Designation</label>
+        <input type="text" name="designation" id="designation" />
+      </div>
+      <br />
+      <div>
+        <label for="salary">Salary</label>
+        <input type="text" name="salary" id="salary" />
+      </div>
+      <br />
+      <div>
+        <label for="city">City</label>
+        <input type="text" name="city" id="city" />
+      </div>
+      <br />
+      <input type="button" value="submit" onclick="submitData()" />
+      <br />
+    </div>
+    <br />
+    <div>
+      <table id="table" style="border: 1px solid black">
+        <!-- Id, Name, Designation, Salary, City-->
+        <!-- Header -->
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Designation</th>
+          <th>Salary</th>
+          <th>City</th>
+        </tr>
+        <!-- Body -->
+        <tr>
+          <th>0001</th>
+          <th>Pankaj</th>
+          <th>Software Engi.</th>
+          <th>15000</th>
+          <th>Pune</th>
+        </tr>
+        <tr>
+          <th>0002</th>
+          <th>Rahul</th>
+          <th>Trainee</th>
+          <th>8000</th>
+          <th>Jalgaon</th>
+        </tr>
+        <tr>
+          <th>0003</th>
+          <th>Sidhant</th>
+          <th>Senior Software Engineer</th>
+          <th>35000</th>
+          <th>Mumbai</th>
+        </tr>
+        <tr>
+          <th>0004</th>
+          <th>Rohit</th>
+          <th>Manager</th>
+          <th>54000</th>
+          <th>Banglore</th>
+        </tr>
+        <tr>
+          <th>0005</th>
+          <th>Sachin</th>
+          <th>President</th>
+          <th>100000</th>
+          <th>New Delhi</th>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+1. Pre requisites: HTML, CSS and Javascript
+2. Javascript advanced(ES features, classes, inheritance)
+3. React introduction
+4. Setup React Local 
+5. React Components(Class components and functional components)
+6. State and props.
+7. Conditional rendering
+8. React project folder structure
+9. Events 
+10. Forms
+11. Controlled and uncontrolled inputs
+12. Components lifecycle
+13. Routing 
+14. API integration with react application.
+15. Advanced concepts in React.
+   1. Hooks
+   2. Redux
+   3. refs
+   4. Context API
+
+
